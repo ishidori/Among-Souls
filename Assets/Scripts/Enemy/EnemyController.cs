@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent agent;
     private HealthPlayer healthPlayer;
     private float distance;
+    [SerializeField] private float Damage;
     [SerializeField] private bool CanDamageWithTheHelpOfHands;
 
     private void Start()
@@ -36,7 +37,7 @@ public class EnemyController : MonoBehaviour
             healthPlayer.Die();
 
             if (CanDamageWithTheHelpOfHands && Time.timeScale == 1f)
-            healthPlayer.Hp -= 0.1f;
+            healthPlayer.Hp -= Damage;
         }       
     }
 

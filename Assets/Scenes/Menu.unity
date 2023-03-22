@@ -967,7 +967,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Glock
+  m_text: 'Beret
+
 
 '
   m_isRightToLeft: 0

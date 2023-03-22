@@ -38,7 +38,7 @@ public class FromGameSoulsCounter : MonoBehaviour
         if (CanCounterIncrease)
         {            
             _CounterScore += 1;
-            PlayerSavedGame.Instance.Souls++;
+            PlayerSavedGame.Instance.Souls+= 10000;
             PlayerSavedGame.Save();
             _CounterText.text = "Souls : " + _CounterScore;
             CanCounterIncrease = false;

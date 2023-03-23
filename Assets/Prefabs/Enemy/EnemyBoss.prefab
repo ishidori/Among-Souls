@@ -1822,6 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 1000
+  Souls: 50
 --- !u!114 &6893432594259817880
 MonoBehaviour:
   m_ObjectHideFlags: 0

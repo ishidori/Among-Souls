@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    [SerializeField] private GameObject[] PrefabEnemy;
+    [SerializeField] private GameObject[] PrefabEnemyPhaze1;
+    [SerializeField] private GameObject[] PrefabEnemyPhaze2;
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
     
@@ -37,7 +38,15 @@ public class SpawnEnemy : MonoBehaviour
                         TimeSpawnEnemy -= 1.5f;
                         break;                   
                 }
-                break;               
+                
+
+                switch (Timer._min)
+                {
+                    case 1:
+                        endWave = true;
+                        break;
+                }
+                break;
         }  
         
         if(Timer._sec == 16)
@@ -53,10 +62,10 @@ public class SpawnEnemy : MonoBehaviour
         while (true)
         {
             
-            for (int i = 0; i < PrefabEnemy.Length; i++)
+            for (int i = 0; i < PrefabEnemyPhaze1.Length; i++)
             {
                 var spawn = Random.Range(0,SpawnPoints.Count);             
-                Instantiate(PrefabEnemy[i],SpawnPoints[spawn]);
+                Instantiate(PrefabEnemyPhaze1[i],SpawnPoints[spawn]);
             }
             yield return new WaitForSeconds(TimeSpawnEnemy);
         }

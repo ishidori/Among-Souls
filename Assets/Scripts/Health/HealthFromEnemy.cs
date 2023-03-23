@@ -3,6 +3,7 @@ using UnityEngine;
 public class HealthFromEnemy : MonoBehaviour
 {    
     [SerializeField] private int _maxHealth = 100;
+    [SerializeField] public int Souls;
     private FromGameSoulsCounter soulsCounter;
     
     private int _currentHealth;
@@ -22,10 +23,11 @@ public class HealthFromEnemy : MonoBehaviour
 
     public void ChangeHealth(int value)
     {
-        _currentHealth += value;
+        _currentHealth -= value;
         
-        if(_currentHealth <= 0)      
-            Death();                   
+        if(_currentHealth <= 0)
+            Death();
+                           
         else
         {
             float _CurrentHealthAsPercantage = (float) _currentHealth / _maxHealth;
@@ -38,9 +40,10 @@ public class HealthFromEnemy : MonoBehaviour
     private void Death()
     {
         soulsCounter.CanCounterIncrease = true;
-        Died?.Invoke();
+        soulsCounter._CounterScore += Souls;
         HealthChanged?.Invoke(0);
-        Destroy(gameObject);
+        Died?.Invoke();
+        Destroy(gameObject);      
     }
 
 
@@ -49,7 +52,7 @@ public class HealthFromEnemy : MonoBehaviour
     {
         if (other.CompareTag("bullet"))
         {
-            ChangeHealth(-10);
+            ChangeHealth(10);
             Destroy(other.gameObject);
         }
     }

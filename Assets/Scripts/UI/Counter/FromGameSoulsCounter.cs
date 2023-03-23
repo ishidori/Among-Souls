@@ -7,7 +7,7 @@ public class FromGameSoulsCounter : MonoBehaviour
     [HideInInspector] public int _CounterScore;
     private HealthFromEnemy[] EventDied;
     [HideInInspector] public bool CanCounterIncrease = true;
-
+    [HideInInspector] public int value;
 
     private void Update()
     {
@@ -36,12 +36,13 @@ public class FromGameSoulsCounter : MonoBehaviour
     private void OnDied()
     {
         if (CanCounterIncrease)
-        {            
-            _CounterScore += 1;
-            PlayerSavedGame.Instance.Souls+= 10000;
+        {
+            PlayerSavedGame.Instance.Souls += _CounterScore;
             PlayerSavedGame.Save();
-            _CounterText.text = "Souls : " + _CounterScore;
+            value += _CounterScore;
+            _CounterText.text = "Souls : " + value;
             CanCounterIncrease = false;
+            _CounterScore -= _CounterScore;
         }      
     }
 }

@@ -24,7 +24,7 @@ public class MenuDead : MonoBehaviour
         Destroy(Time);
         Time.Time_Text.text = "";
 
-        Souls_TextInMenu.text = "Collect souls: " + CounterSouls._CounterScore.ToString();
+        Souls_TextInMenu.text = "Collect souls: " + CounterSouls.value.ToString();
         CounterSouls._CounterText.text = "";
         VolumeReload.Stop();
     }

@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class SliderMusic : MonoBehaviour
 {
-    [SerializeField] private AudioSource musicSource;
-    [SerializeField] private Slider sliderMusic;
+
+    [SerializeField] public AudioSource musicSource;
+    [SerializeField] public Slider sliderMusic;
     private string FirtStartGame;
 
     private void Start()

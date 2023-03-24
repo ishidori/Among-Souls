@@ -47,6 +47,9 @@ public class Weapon : MonoBehaviour
         CounterBulletInMagazin.text = CurrentMagBullets + "/" + TotalBullets;        
         TimeForReloading(Time.deltaTime);
         FunctionBoolAutoReload();
+
+        if (Input.GetKeyDown(KeyCode.R))
+            ButtonReload();
     }
 
 

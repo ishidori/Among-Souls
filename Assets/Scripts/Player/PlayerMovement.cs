@@ -25,8 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public void MovePlayer (Vector3 moveDirection)
     {
         var offset = moveDirection * _speed * Time.deltaTime;
-        //_rb.MovePosition(_rb.position + offset);
-        transform.position = (transform.position + offset);
+        transform.position += offset;
         _light.FollowPlayer();
 
     }

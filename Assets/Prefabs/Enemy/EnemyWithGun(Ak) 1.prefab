@@ -1010,8 +1010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpreadLeft: -5
   BulletSpreadRight: 5
-  RandomSpeedShotValue1: 0.13
-  RandomSpeedShotValue2: 0.16
+  RandomSpeedShotValue1: 0.26
+  RandomSpeedShotValue2: 0.3
   Volume: 0.3
   agent: {fileID: 281206434515362495}
   SpawnBullet: {fileID: 5914382942598410838}

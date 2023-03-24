@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MovementJoystick : MonoBehaviour, IrotationPlayer
 {
-    [SerializeField] private Joystick joystick;
+    [SerializeField] public Joystick joystick;
     [SerializeField] private ShootingJoystick shootingJoystick;
     private PlayerMovement playermovement;
     [HideInInspector] public bool OnRotateInMovement = false;

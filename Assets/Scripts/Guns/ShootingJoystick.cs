@@ -41,7 +41,7 @@ public class ShootingJoystick : MonoBehaviour, IrotationPlayer
 
     private void BoolRotate()
     {
-        if(Mathf.Abs(joystick.Horizontal) > 0f || Mathf.Abs(joystick.Horizontal ) > 0f)
+        if(Mathf.Abs(joystick.Horizontal) > 0f || Mathf.Abs(joystick.Horizontal ) > 0f)            
         {
             OnRotateInShooting = true;
         }
@@ -49,6 +49,6 @@ public class ShootingJoystick : MonoBehaviour, IrotationPlayer
         {
             OnRotateInShooting = false;
         }
-        Debug.Log(OnRotateInShooting);
+        //Debug.Log(OnRotateInShooting);
     }
 }

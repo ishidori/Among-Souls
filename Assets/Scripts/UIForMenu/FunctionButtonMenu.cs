@@ -82,7 +82,7 @@ public class FunctionButtonMenu : MonoBehaviour
 
     public void ButtonGitHub()
     {
-        Application.OpenURL("https://github.com/ishidori");
+        Application.OpenURL("https://github.com/ishidori/Among-Souls");
         ButtonClickSound.Play();
     }
 

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class SliderSfx : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] SfxSource;
+    [SerializeField] public AudioSource[] SfxSource;
     [SerializeField] public Slider sliderSfx;
     private string FirtStartGame;
 

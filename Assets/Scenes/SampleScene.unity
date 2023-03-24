@@ -329,7 +329,7 @@ MonoBehaviour:
   TimeForReload: 4
   RateOfFire: 0.2
   _shootForse: 30
-  VolumeForShoot: 0.3
+  VolumeForShoot: 0.7
   CounterBulletInMagazin: {fileID: 1551609492}
   BulletPrefab: {fileID: 5916895498491905275, guid: f89c5ba5d5958244daa00f8ff6ba04bc, type: 3}
   SpawnBullet: {fileID: 6757968}
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11959,7 +11959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.30980393, g: 0.30980393, b: 0.30980393, a: 1}
+  m_Color: {r: 0.8392157, g: 0.8392157, b: 0.8392157, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

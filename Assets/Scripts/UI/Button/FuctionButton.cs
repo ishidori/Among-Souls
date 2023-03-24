@@ -13,6 +13,14 @@ public class FuctionButton : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            ExitMenu();
+        }
+    }
+
     public void Yes()
     {
         SceneManager.LoadScene(0);

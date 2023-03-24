@@ -41,7 +41,6 @@ public class Weapon : MonoBehaviour
     }
 
 
-
     private void Update()
     {
         CounterBulletInMagazin.text = CurrentMagBullets + "/" + TotalBullets;        
@@ -52,13 +51,11 @@ public class Weapon : MonoBehaviour
             ButtonReload();
     }
 
-
     private void OnEnable()
     {
         StartCoroutine(routine: CoroutineShoot());
         OnReloading = false;
     }
-
 
 
     private void OnDisable()
@@ -71,7 +68,6 @@ public class Weapon : MonoBehaviour
     }
 
 
-
     public void Shoot()
     {      
         SpawnBullet.localRotation = Quaternion.Euler(Gun.localRotation.x, Gun.localRotation.y + 
@@ -81,7 +77,6 @@ public class Weapon : MonoBehaviour
         Bullet.GetComponent<Rigidbody>().AddForce(SpawnBullet.forward * _shootForse,ForceMode.Impulse);
         Destroy(Bullet, 2f);
     }
-
 
 
     private IEnumerator CoroutineShoot()
@@ -104,14 +99,12 @@ public class Weapon : MonoBehaviour
     }
 
 
-
     public void Reloading()
     {
         var amount = Mathf.Min(MagCapacity - CurrentMagBullets, TotalBullets);
         TotalBullets -= amount;
         CurrentMagBullets += amount;
     }
-
 
 
     public void ButtonReload()
@@ -124,7 +117,6 @@ public class Weapon : MonoBehaviour
     }
 
 
-
     public void AutoReload()
     {      
         if (CurrentMagBullets == 0 && TotalBullets > 0)
@@ -134,7 +126,6 @@ public class Weapon : MonoBehaviour
             AudioSource.Play();          
         }
     }
-
 
 
     private void FunctionBoolAutoReload()
@@ -149,7 +140,6 @@ public class Weapon : MonoBehaviour
             CanReload = true;
         }
     }
-
 
 
     private void TimeForReloading(float dt)
@@ -172,7 +162,12 @@ public class Weapon : MonoBehaviour
             OnReloading = false;
             TimeReload?.Invoke(0f);
             AudioSource.Stop();
-        }               
+        } 
+        
+        if(TotalBullets <= 0)
+        {
+            TotalBullets += 999;
+        }
     }
    
 }

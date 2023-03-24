@@ -3527,7 +3527,7 @@ GameObject:
   - component: {fileID: 801613824}
   - component: {fileID: 801613828}
   m_Layer: 5
-  m_Name: Canvas - MenuGuns
+  m_Name: Canvas - MenuShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6827,7 +6827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -198484, y: -63655.35}
+  m_AnchoredPosition: {x: -239076, y: -76635.35}
   m_SizeDelta: {x: 680, y: 1264.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235081191
@@ -7145,9 +7145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Guns
-
-'
+  m_text: Shop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
@@ -10825,7 +10823,7 @@ GameObject:
   - component: {fileID: 2070484957}
   - component: {fileID: 2070484956}
   m_Layer: 5
-  m_Name: Button - Guns
+  m_Name: Button - Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

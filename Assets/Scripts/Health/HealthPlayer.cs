@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class HealthPlayer : MonoBehaviour
 {
-    [SerializeField] private Image HpBarPlayer;
+    [SerializeField] public Image HpBarPlayer;
     [SerializeField] private MenuDead MenuDie;
     public float Hp = 100f;
-    private float currentHp;
+    [HideInInspector] public float currentHp;
 
     private void Start() => currentHp = Hp;
 
@@ -17,6 +17,7 @@ public class HealthPlayer : MonoBehaviour
             Destroy(gameObject);
             MenuDie.Menu();
         }                           
+        
         float _CurrentHealthAsPercantage = Hp / currentHp;
         HpBarPlayer.fillAmount = _CurrentHealthAsPercantage;
     }

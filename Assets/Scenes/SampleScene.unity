@@ -5203,6 +5203,7 @@ MonoBehaviour:
   HpBarPlayer: {fileID: 556441457}
   MenuDie: {fileID: 1196451153}
   Hp: 175
+  currentHp: 0
 --- !u!114 &825321271
 MonoBehaviour:
   m_ObjectHideFlags: 0

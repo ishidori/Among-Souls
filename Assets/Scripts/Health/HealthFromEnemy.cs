@@ -36,16 +36,14 @@ public class HealthFromEnemy : MonoBehaviour
     }
 
 
-
     private void Death()
     {
-        soulsCounter.CanCounterIncrease = true;
         soulsCounter._CounterScore += Souls;
+        soulsCounter.CanCounterIncrease = true;     
         HealthChanged?.Invoke(0);
         Died?.Invoke();
-        Destroy(gameObject);      
+        Destroy(gameObject);
     }
-
 
 
     private void OnTriggerEnter(Collider other)

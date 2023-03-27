@@ -8,6 +8,7 @@ TagManager:
   - ground
   - bullet
   - bulletEnemy
+  - Message
   layers:
   - Default
   - TransparentFX

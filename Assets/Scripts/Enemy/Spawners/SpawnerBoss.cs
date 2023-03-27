@@ -5,14 +5,16 @@ using System.Collections.Generic;
 
 public class SpawnerBoss : MonoBehaviour
 {
-    [SerializeField] private GameObject PrefabEnemy;
+    [SerializeField] private GameObject[] PrefabEnemy;
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
+
 
     private void Start()
     {
         StartCoroutine(SpawnerHardEnemy());
     }
+
 
     private IEnumerator SpawnerHardEnemy()
     {
@@ -20,7 +22,8 @@ public class SpawnerBoss : MonoBehaviour
         {
             yield return new WaitForSeconds(TimeSpawnEnemy);
             var spawn = Random.Range(0, SpawnPoints.Count);
-            Instantiate(PrefabEnemy, SpawnPoints[spawn]);
+            var random = Random.Range(0, PrefabEnemy.Length);
+            Instantiate(PrefabEnemy[random], SpawnPoints[spawn]);
         }
     }
 }

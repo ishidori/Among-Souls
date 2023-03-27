@@ -692,6 +692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 300
   Souls: 5
+  _currentHealth: 0
+  CanHealPlayer: 1
 --- !u!114 &6893432594259817880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,6 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0.2
   CanDamageWithTheHelpOfHands: 1
+  FaceTargetInPlayer: 1
 --- !u!195 &6893432594259817882
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -770,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7385dfd7c270c4980388e2b0a0e471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpEnemy: {fileID: 6893432594259817883}
   currentHp: 0
 --- !u!1 &6893432594307221080
 GameObject:

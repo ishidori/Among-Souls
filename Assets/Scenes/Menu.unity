@@ -631,7 +631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '100
+  m_text: '140
 
 '
   m_isRightToLeft: 0
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '200
+  m_text: '300
 
 '
   m_isRightToLeft: 0
@@ -2111,7 +2111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '120
+  m_text: '200
 
 '
   m_isRightToLeft: 0
@@ -3434,7 +3434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '75
+  m_text: '100
 
 '
   m_isRightToLeft: 0
@@ -3817,7 +3817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueItem: 5
-  PriceItem: 120
+  PriceItem: 200
   Text_Item: {fileID: 511482962}
   shop: {fileID: 801613828}
   isBuy: 0
@@ -5303,7 +5303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueItem: 3
-  PriceItem: 75
+  PriceItem: 100
   Text_Item: {fileID: 786738852}
   shop: {fileID: 801613828}
   isBuy: 0
@@ -5653,7 +5653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueItem: 6
-  PriceItem: 200
+  PriceItem: 300
   Text_Item: {fileID: 273061107}
   shop: {fileID: 801613828}
   isBuy: 0
@@ -6827,7 +6827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -239076, y: -76635.35}
+  m_AnchoredPosition: {x: -340, y: -295.33594}
   m_SizeDelta: {x: 680, y: 1264.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235081191
@@ -7355,7 +7355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueItem: 4
-  PriceItem: 100
+  PriceItem: 140
   Text_Item: {fileID: 200749621}
   shop: {fileID: 801613828}
   isBuy: 0
@@ -8335,7 +8335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueItem: 7
-  PriceItem: 500
+  PriceItem: 666
   Text_Item: {fileID: 2074162168}
   shop: {fileID: 801613828}
   isBuy: 0
@@ -11002,9 +11002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '500
-
-'
+  m_text: 666
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
@@ -12696,7 +12694,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652197647867920994}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 387388582}
@@ -12842,7 +12840,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ncm: 1
-  maxFR: 60
+  maxFR: 120
   refresht: 0.1
 --- !u!114 &1693114601537858696
 MonoBehaviour:
@@ -12851,7 +12849,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652100650137796240}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 

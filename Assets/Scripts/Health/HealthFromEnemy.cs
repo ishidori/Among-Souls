@@ -1,17 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public class HealthFromEnemy : MonoBehaviour
 {    
     [SerializeField] private int _maxHealth = 100;
-    [SerializeField] public int Souls;
+    [SerializeField] public int Souls;  
+    [HideInInspector] public int _currentHealth;
     private FromGameSoulsCounter soulsCounter;
-    
-    private int _currentHealth;
 
     public event Action <float> HealthChanged;
     public event Action Died;
-
-
+    
+    private bool _isAlive = true;
 
     private void Start()
     {
@@ -36,13 +37,17 @@ public class HealthFromEnemy : MonoBehaviour
     }
 
 
-    private void Death()
+    public void Death()
     {
-        soulsCounter._CounterScore += Souls;
-        soulsCounter.CanCounterIncrease = true;     
-        HealthChanged?.Invoke(0);
-        Died?.Invoke();
-        Destroy(gameObject);
+        if (_isAlive)
+        {
+            soulsCounter._CounterScore += Souls;
+            soulsCounter.CanCounterIncrease = true;
+            HealthChanged?.Invoke(0);
+            Died?.Invoke();                     
+            Destroy(gameObject);
+            _isAlive = false;
+        } 
     }
 
 

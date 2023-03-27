@@ -7,11 +7,13 @@ public class SpawnersEasyEnemy : MonoBehaviour
     [SerializeField] private GameObject PrefabEnemy;
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
-    [SerializeField] private int StopSpawnMin;
+    //[SerializeField] private int StopSpawnMin;
     private TimeLive Timer;
     private bool endWave = false;
-    private bool stop = false;
-    
+    private bool stop1wawe = false;
+    private bool stop2wawe = false;
+    private bool stop3wawe = false;
+
     private void Start()
     {
         StartCoroutine(SpawnerEasyEnemy());
@@ -53,20 +55,26 @@ public class SpawnersEasyEnemy : MonoBehaviour
             TimeSpawnEnemy = 5;
 
         
-        if(Timer._min == 1 && stop == false)
+        if(Timer._min == 1 && stop1wawe == false)
         {
             TimeSpawnEnemy += 3;
             endWave = true;
-            stop = true;
+            stop1wawe = true;
         }
                 
+        if(Timer._min == 3 && stop2wawe == false)
+        {
+            TimeSpawnEnemy += 4;
+            endWave = true;
+            stop2wawe = true;
+        }
         
-        //if (Timer._min == StopSpawnMin)
-        //{
-        //    SpawnPoints.Clear();
-        //    StopCoroutine(SpawnerEasyEnemy());
-        //}
-
+        if (Timer._min == 9 && stop3wawe == false)
+        {
+            TimeSpawnEnemy += 5;
+            endWave = true;
+            stop3wawe = true;
+        }
     }
 
 

@@ -16,8 +16,8 @@ public class HealthPlayer : MonoBehaviour
         {
             Destroy(gameObject);
             MenuDie.Menu();
-        }                           
-        
+        }
+
         float _CurrentHealthAsPercantage = Hp / currentHp;
         HpBarPlayer.fillAmount = _CurrentHealthAsPercantage;
     }

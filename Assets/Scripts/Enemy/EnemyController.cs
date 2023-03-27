@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     private float distance;
     [SerializeField] private float Damage;
     [SerializeField] private bool CanDamageWithTheHelpOfHands;
-
+    [SerializeField] private bool FaceTargetInPlayer;
     private void Start()
     {
         target = TrackPlayer.instance.player.transform;
@@ -45,9 +45,13 @@ public class EnemyController : MonoBehaviour
 
     private void FaceTarget()
     {
-        Vector3 direction  = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation,lookRotation,Time.deltaTime * 5f);
+        if (FaceTargetInPlayer)
+        {
+            Vector3 direction = (target.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+       
     }
 
 }

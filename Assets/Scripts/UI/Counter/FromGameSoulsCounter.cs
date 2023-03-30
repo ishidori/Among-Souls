@@ -4,6 +4,8 @@ using TMPro;
 public class FromGameSoulsCounter : MonoBehaviour
 {  
     [SerializeField] public TextMeshProUGUI _CounterText;
+    [SerializeField] public string[] Text;
+    private int language;
     [HideInInspector] public int _CounterScore;
     private HealthFromEnemy[] EventDied;
     [HideInInspector] public bool CanCounterIncrease = true;
@@ -14,7 +16,10 @@ public class FromGameSoulsCounter : MonoBehaviour
         FindEnemyForCounter();
     }
 
-
+    private void Start()
+    {
+        language = PlayerPrefs.GetInt("Language");
+    }
 
     public void FindEnemyForCounter()
     {
@@ -40,7 +45,7 @@ public class FromGameSoulsCounter : MonoBehaviour
             PlayerSavedGame.Instance.Souls += _CounterScore;
             PlayerSavedGame.Save();
             value += _CounterScore;
-            _CounterText.text = "Souls : " + value;
+            _CounterText.text = Text[language] + value.ToString();
             CanCounterIncrease = false;
             _CounterScore -= _CounterScore;
         }      

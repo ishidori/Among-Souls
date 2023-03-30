@@ -9,6 +9,8 @@ TagManager:
   - bullet
   - bulletEnemy
   - Message
+  - World
+  - WorldTrigger
   layers:
   - Default
   - TransparentFX

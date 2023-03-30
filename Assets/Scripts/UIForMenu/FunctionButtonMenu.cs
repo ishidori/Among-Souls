@@ -14,6 +14,16 @@ public class FunctionButtonMenu : MonoBehaviour
     //For ShopGun
     [SerializeField] private Canvas MenuShopGuns;
 
+    //For Localization
+    private Localization[] Localization;
+    private Shop shop;
+
+    private void Start()
+    {
+        Localization = FindObjectsOfType<Localization>();
+        shop = FindObjectOfType<Shop>();
+    }
+
 
     public void ButtonPlay()
     {
@@ -100,5 +110,22 @@ public class FunctionButtonMenu : MonoBehaviour
         }     
     }
 
+
+    public void Rus()
+    {
+        PlayerPrefs.SetInt("Language",1);
+        foreach (Localization loc in Localization)
+        loc.FunctionLocalization();
+        shop.UpdateWeaponList();
+    }
+
+
+    public void Eng() 
+    {
+        PlayerPrefs.SetInt("Language", 0);
+        foreach(Localization loc in Localization)
+        loc.FunctionLocalization();
+        shop.UpdateWeaponList();
+    }
 
 }

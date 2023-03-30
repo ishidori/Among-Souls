@@ -48,8 +48,8 @@ public class SpawnersHardEnemy : MonoBehaviour
             endWave = false;
 
 
-        if (TimeSpawnEnemy < 9)
-            TimeSpawnEnemy = 8;
+        if (TimeSpawnEnemy < 8)
+            TimeSpawnEnemy = 7;
 
 
         if (Timer._min == StopSpawnMin)

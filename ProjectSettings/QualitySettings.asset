@@ -77,7 +77,8 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - WebGL
   - serializedVersion: 2
     name: Medium
     pixelLightCount: 1
@@ -113,7 +114,8 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - WebGL
   - serializedVersion: 2
     name: High
     pixelLightCount: 2
@@ -149,7 +151,8 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - WebGL
   - serializedVersion: 2
     name: Very High
     pixelLightCount: 3
@@ -185,15 +188,16 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - WebGL
   - serializedVersion: 2
     name: Ultra
     pixelLightCount: 4
-    shadows: 2
-    shadowResolution: 2
-    shadowProjection: 1
+    shadows: 1
+    shadowResolution: 0
+    shadowProjection: 0
     shadowCascades: 4
-    shadowDistance: 150
+    shadowDistance: 50
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -201,10 +205,10 @@ QualitySettings:
     skinWeights: 4
     textureQuality: 0
     anisotropicTextures: 2
-    antiAliasing: 2
+    antiAliasing: 0
     softParticles: 1
     softVegetation: 1
-    realtimeReflectionProbes: 1
+    realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 1
     vSyncCount: 1
     lodBias: 2
@@ -215,13 +219,14 @@ QualitySettings:
     streamingMipmapsRenderersPerFrame: 512
     streamingMipmapsMaxLevelReduction: 2
     streamingMipmapsMaxFileIORequests: 1024
-    particleRaycastBudget: 4096
+    particleRaycastBudget: 4069
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - WebGL
   m_PerPlatformDefaultQuality:
     Android: 2
     GameCoreScarlett: 5
@@ -234,7 +239,7 @@ QualitySettings:
     Server: 0
     Stadia: 5
     Standalone: 5
-    WebGL: 3
+    WebGL: 0
     Windows Store Apps: 5
     XboxOne: 5
     iPhone: 2

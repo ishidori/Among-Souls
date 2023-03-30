@@ -169,6 +169,5 @@ public class Weapon : MonoBehaviour
             TotalBullets += 999;
         }
     }
-   
 }
 

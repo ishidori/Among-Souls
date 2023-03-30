@@ -1,7 +1,6 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Shop : MonoBehaviour
 { 
     [HideInInspector] public int ValueItem;
@@ -11,12 +10,16 @@ public class Shop : MonoBehaviour
     [SerializeField] private Image[] Indicator;
     [SerializeField] private TextMeshProUGUI CounterSouls;
     [SerializeField] public AudioSource ButtonClickSound;
+    [SerializeField] private string[] text;
+    [SerializeField] private string[] text1;
+    private int Language;
 
     private void Start()
     {
+        Language = PlayerPrefs.GetInt("Language");
         PlayerSavedGame.Load();     
         UpdateWeaponList();       
-        CounterSouls.text = "Souls: " + PlayerSavedGame.Instance.Souls.ToString();
+        CounterSouls.text = text[Language] + PlayerSavedGame.Instance.Souls.ToString();
         PlayerSavedGame.Save();
         SelectionIndicator();
     }
@@ -44,7 +47,8 @@ public class Shop : MonoBehaviour
             {
                 if (AllItem[y].GetComponent<Item>().ValueItem.ToString() == PlayerSavedGame.Instance.BuyItems[i])
                 {
-                    AllItem[y].GetComponent<Item>().Text_Item.text = "Acquired";
+                    Language = PlayerPrefs.GetInt("Language");
+                    AllItem[y].GetComponent<Item>().Text_Item.text = text1[Language];
                     AllItem[y].GetComponent<Item>().isBuy = true;
                 }
             }

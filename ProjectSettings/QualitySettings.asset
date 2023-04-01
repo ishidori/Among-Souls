@@ -228,7 +228,7 @@ QualitySettings:
     excludedTargetPlatforms:
     - WebGL
   m_PerPlatformDefaultQuality:
-    Android: 2
+    Android: 0
     GameCoreScarlett: 5
     GameCoreXboxOne: 5
     Lumin: 5
@@ -238,7 +238,7 @@ QualitySettings:
     PS5: 5
     Server: 0
     Stadia: 5
-    Standalone: 5
+    Standalone: 0
     WebGL: 0
     Windows Store Apps: 5
     XboxOne: 5

@@ -7,7 +7,7 @@ public class SpawnersHeal : MonoBehaviour
     [SerializeField] private GameObject PrefabEnemy;
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
-    [SerializeField] private int StopSpawnMin;
+    [SerializeField] private FromGameSoulsCounter counter;
     private TimeLive Timer;
     private bool endWave = false;
 
@@ -50,14 +50,6 @@ public class SpawnersHeal : MonoBehaviour
 
         if (TimeSpawnEnemy < 15)
             TimeSpawnEnemy = 13;
-
-
-        if (Timer._min == StopSpawnMin)
-        {
-            SpawnPoints.Clear();
-            StopCoroutine(SpawnerHardEnemy());
-        }
-
     }
 
 
@@ -68,6 +60,7 @@ public class SpawnersHeal : MonoBehaviour
             yield return new WaitForSeconds(TimeSpawnEnemy);
             var spawn = Random.Range(0, SpawnPoints.Count);
             Instantiate(PrefabEnemy, SpawnPoints[spawn]);
+            counter.FindEnemyForCounter();
         }
     }
 }

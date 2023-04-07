@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 67
   m_IgnoreTag: Enemy
   m_TransparentLayers:
     serializedVersion: 2
@@ -2506,7 +2506,7 @@ GameObject:
   - component: {fileID: 305037483}
   - component: {fileID: 305037482}
   - component: {fileID: 305037481}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (7)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -2967,7 +2967,7 @@ MonoBehaviour:
   - {fileID: 1336258891}
   - {fileID: 406913911}
   TimeSpawnEnemy: 40
-  StopSpawnMin: 1000
+  counter: {fileID: 4211113}
 --- !u!1 &406913910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,8 +3197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fba55cb05402c49981856b09d90a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 416156159}
-  movementJoystick: {fileID: 3861230483213302121}
+  joystickShooting: {fileID: 416156159}
   OnRotateInShooting: 1
 --- !u!1 &417775783
 GameObject:
@@ -3461,6 +3460,100 @@ Transform:
   m_Father: {fileID: 65325947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471013678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471013679}
+  - component: {fileID: 471013680}
+  m_Layer: 0
+  m_Name: LightMain (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &471013679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471013678}
+  m_LocalRotation: {x: 0.014110016, y: -0.77364683, z: 0.63341814, w: -0.007279098}
+  m_LocalPosition: {x: 19.452, y: 87.32555, z: -0.79746246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2047466728}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 101.711, y: -193.793, z: -193.827}
+--- !u!108 &471013680
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471013678}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 6.5
+  m_Range: 100
+  m_SpotAngle: 128.32
+  m_InnerSpotAngle: 1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: 3
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 7.45
+  m_ShadowAngle: 0
 --- !u!1 &491575365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3565,7 @@ GameObject:
   - component: {fileID: 491575366}
   - component: {fileID: 491575367}
   m_Layer: 0
-  m_Name: Directional Light 5 (4)
+  m_Name: ForColumnTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4293,7 +4386,7 @@ GameObject:
   - component: {fileID: 623433724}
   - component: {fileID: 623433723}
   - component: {fileID: 623433722}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (5)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -4759,7 +4852,7 @@ GameObject:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
   m_Layer: 0
-  m_Name: 'Directional Light 1 '
+  m_Name: RedTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4814,7 +4907,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 66
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -5226,7 +5319,7 @@ GameObject:
   - component: {fileID: 736806259}
   - component: {fileID: 736806260}
   m_Layer: 0
-  m_Name: Directional Light 5 (3)
+  m_Name: 'ForColumnDown 1 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5245,7 +5338,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2047466728}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 138.237, y: 22.278, z: 33.811996}
 --- !u!108 &736806260
 Light:
@@ -5778,7 +5871,7 @@ MonoBehaviour:
   - {fileID: 672821184}
   - {fileID: 601716676}
   TimeSpawnEnemy: 75
-  StopSpawnMin: 1000
+  counter: {fileID: 4211113}
 --- !u!1 &825321257
 GameObject:
   m_ObjectHideFlags: 0
@@ -5900,9 +5993,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 2
+  m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &825321268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6159,7 +6252,7 @@ GameObject:
   - component: {fileID: 882362263}
   - component: {fileID: 882362264}
   m_Layer: 0
-  m_Name: Directional Light 5 (5)
+  m_Name: ForColumnDown 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6178,7 +6271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2047466728}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 105.832, y: -224.189, z: -222.865}
 --- !u!108 &882362264
 Light:
@@ -6745,7 +6838,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -7120,7 +7213,7 @@ MonoBehaviour:
   - {fileID: 1185030695}
   - {fileID: 1027524010}
   TimeSpawnEnemy: 66
-  StopSpawnMin: 1000
+  counter: {fileID: 4211113}
 --- !u!1 &1027524009
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,6 +7435,7 @@ MonoBehaviour:
   - {fileID: 1154482245}
   - {fileID: 983972755}
   TimeSpawnEnemy: 80
+  counter: {fileID: 4211113}
 --- !u!1 &1063331576
 GameObject:
   m_ObjectHideFlags: 0
@@ -7481,6 +7575,7 @@ MonoBehaviour:
   - {fileID: 597451572}
   - {fileID: 1551451068}
   TimeSpawnEnemy: 10
+  counter: {fileID: 4211113}
 --- !u!1 &1066687979
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,7 +8647,7 @@ GameObject:
   - component: {fileID: 1189371018}
   - component: {fileID: 1189371017}
   m_Layer: 0
-  m_Name: Directional Light 4
+  m_Name: RedRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8607,7 +8702,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 66
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -9657,7 +9752,7 @@ GameObject:
   - component: {fileID: 1318704655}
   - component: {fileID: 1318704656}
   m_Layer: 0
-  m_Name: Directional Light 5 (2)
+  m_Name: ForBoxInDownRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9676,7 +9771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2047466728}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 132.413, y: -22.438995, z: -25.313995}
 --- !u!108 &1318704656
 Light:
@@ -10058,7 +10153,7 @@ GameObject:
   - component: {fileID: 1375124529}
   - component: {fileID: 1375124530}
   m_Layer: 0
-  m_Name: Directional Light 5
+  m_Name: ForMiddleBild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10170,9 +10265,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 937325588}
-  - {fileID: 1660788198}
   m_Father: {fileID: 2047466728}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -179.378, z: 1.001}
 --- !u!1 &1394181937
 GameObject:
@@ -10314,7 +10408,7 @@ GameObject:
   - component: {fileID: 1399719626}
   - component: {fileID: 1399719625}
   m_Layer: 0
-  m_Name: Directional Light 2
+  m_Name: RedDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10369,7 +10463,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 66
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -11229,6 +11323,7 @@ MonoBehaviour:
   - {fileID: 2088275486}
   - {fileID: 698269778}
   TimeSpawnEnemy: 7
+  counter: {fileID: 4211113}
 --- !u!4 &1566300232
 Transform:
   m_ObjectHideFlags: 0
@@ -11291,7 +11386,7 @@ GameObject:
   - component: {fileID: 1575027437}
   - component: {fileID: 1575027436}
   - component: {fileID: 1575027435}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -11470,7 +11565,7 @@ GameObject:
   - component: {fileID: 1595845370}
   - component: {fileID: 1595845371}
   m_Layer: 0
-  m_Name: Directional Light 5 (1)
+  m_Name: ForBoxInTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11758,7 +11853,7 @@ GameObject:
   - component: {fileID: 1660788198}
   - component: {fileID: 1660788200}
   m_Layer: 0
-  m_Name: Directional Light (5)
+  m_Name: LightMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11771,13 +11866,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660788197}
-  m_LocalRotation: {x: 0.633361, y: -0.017011557, z: -0.017428782, w: 0.7734732}
-  m_LocalPosition: {x: 2.0002604, y: -4.0000095, z: -2.000186}
+  m_LocalRotation: {x: 0.014110016, y: -0.77364683, z: 0.63341814, w: -0.007279098}
+  m_LocalPosition: {x: 19.452, y: 87.32555, z: -0.79746246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1384474377}
-  m_RootOrder: 1
+  m_Father: {fileID: 2047466728}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 101.711, y: -193.793, z: -193.827}
 --- !u!108 &1660788200
 Light:
@@ -12885,7 +12980,7 @@ GameObject:
   - component: {fileID: 1807696354}
   - component: {fileID: 1807696353}
   - component: {fileID: 1807696352}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (1)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -13204,7 +13299,7 @@ GameObject:
   - component: {fileID: 1876412727}
   - component: {fileID: 1876412726}
   - component: {fileID: 1876412725}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (6)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -13219,8 +13314,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876412723}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 27.576916, y: -76.02192, z: 84.028305}
-  m_LocalScale: {x: 100.000015, y: 4.5492024, z: 3.7922003}
+  m_LocalPosition: {x: 26.7, y: -74.91, z: 84.028305}
+  m_LocalScale: {x: 377.05392, y: 6.9065995, z: 3.7922003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1679976399}
@@ -13348,7 +13443,7 @@ MonoBehaviour:
   Gun: {fileID: 1011239696}
   Shooting: {fileID: 416156162}
   AudioSource: {fileID: 778986034}
-  ClipForShoot: {fileID: 8300000, guid: 8a3455d09751e9a468f75b58fcc736e3, type: 3}
+  ClipForShoot: {fileID: 0}
 --- !u!1 &1912081199
 GameObject:
   m_ObjectHideFlags: 0
@@ -13361,7 +13456,7 @@ GameObject:
   - component: {fileID: 1912081203}
   - component: {fileID: 1912081202}
   - component: {fileID: 1912081201}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (4)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -13376,8 +13471,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912081199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.836948, y: -76.02192, z: -11.961708}
-  m_LocalScale: {x: 100, y: 4.5492024, z: 3.7922}
+  m_LocalPosition: {x: 28.837, y: -76.02192, z: -11.961708}
+  m_LocalScale: {x: 378.39273, y: 5.241628, z: 3.7922}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1679976399}
@@ -13533,7 +13628,7 @@ GameObject:
   - component: {fileID: 1938008655}
   - component: {fileID: 1938008654}
   m_Layer: 0
-  m_Name: Directional Light 3
+  m_Name: RedLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13588,7 +13683,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 66
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -13794,7 +13889,7 @@ GameObject:
   - component: {fileID: 1954624889}
   - component: {fileID: 1954624888}
   - component: {fileID: 1954624887}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (3)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -14566,11 +14661,13 @@ Transform:
   - {fileID: 1189371018}
   - {fileID: 1375124529}
   - {fileID: 1595845370}
-  - {fileID: 1384474377}
   - {fileID: 1318704655}
   - {fileID: 736806259}
-  - {fileID: 491575366}
   - {fileID: 882362263}
+  - {fileID: 491575366}
+  - {fileID: 1660788198}
+  - {fileID: 471013679}
+  - {fileID: 1384474377}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14820,7 +14917,7 @@ GameObject:
   - component: {fileID: 2120463840}
   - component: {fileID: 2120463839}
   - component: {fileID: 2120463838}
-  m_Layer: 6
+  m_Layer: 1
   m_Name: Block (2)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -15437,7 +15534,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 21300000, guid: 91db8970c28d4a344beff5618f7a0ca3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
-  m_FillCenter: 1
+  m_FillCenter: 0
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
@@ -15483,7 +15580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8d969ed6955234fba018c981294736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 3861230483213302120}
+  joystickMovement: {fileID: 3861230483213302120}
   shootingJoystick: {fileID: 416156162}
   OnRotateInMovement: 1
 --- !u!1 &3861230483432438430

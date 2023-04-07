@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(routine: CoroutineShoot());
+        StartCoroutine(CoroutineShoot());
         OnReloading = false;
     }
 
@@ -85,8 +85,8 @@ public class Weapon : MonoBehaviour
         {
             if (!CantShoot)
             {
-                if ((Mathf.Abs(Shooting.joystick.Horizontal) >= 0.7f && CurrentMagBullets > 0)
-                    || (Mathf.Abs(Shooting.joystick.Vertical)) >= 0.7f && CurrentMagBullets > 0)
+                if ((Mathf.Abs(Shooting.joystickShooting.Horizontal) >= 0.7f && CurrentMagBullets > 0)
+                    || (Mathf.Abs(Shooting.joystickShooting.Vertical)) >= 0.7f && CurrentMagBullets > 0)
                 {
                     Shoot();
                     AudioSource.pitch = UnityEngine.Random.Range(0.95f,1.15f);
@@ -96,6 +96,8 @@ public class Weapon : MonoBehaviour
             }           
             yield return new WaitForSeconds(RateOfFire);
         }
+
+        
     }
 
 

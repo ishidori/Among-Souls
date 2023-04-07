@@ -7,7 +7,7 @@ public class SpawnersHardEnemy : MonoBehaviour
     [SerializeField] private GameObject PrefabEnemy;
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
-    [SerializeField] private int StopSpawnMin;
+    [SerializeField] private FromGameSoulsCounter counter;
     private TimeLive Timer;
     private bool endWave = false;
 
@@ -47,17 +47,8 @@ public class SpawnersHardEnemy : MonoBehaviour
         if (Timer._sec == 16 || Timer._sec == 46)
             endWave = false;
 
-
         if (TimeSpawnEnemy < 8)
             TimeSpawnEnemy = 7;
-
-
-        if (Timer._min == StopSpawnMin)
-        {
-            SpawnPoints.Clear();
-            StopCoroutine(SpawnerHardEnemy());
-        }
-
     }
 
 
@@ -68,6 +59,7 @@ public class SpawnersHardEnemy : MonoBehaviour
             yield return new WaitForSeconds(TimeSpawnEnemy);
             var spawn = Random.Range(0, SpawnPoints.Count);
             Instantiate(PrefabEnemy, SpawnPoints[spawn]);
+            counter.FindEnemyForCounter();
         }
     }
 }

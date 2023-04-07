@@ -1,12 +1,8 @@
-using System;
 using UnityEngine;
 
-public class ShootingJoystick : MonoBehaviour, IrotationPlayer
-{
-    public static ShootingJoystick Instance;
-      
-    [SerializeField] public Joystick joystick;
-    [SerializeField] private MovementJoystick movementJoystick;
+public class ShootingJoystick : MonoBehaviour,IrotationPlayer
+{      
+    [SerializeField] public Joystick joystickShooting;
     private PlayerMovement playermovement;
     [HideInInspector] public bool OnRotateInShooting = true;
 
@@ -14,41 +10,31 @@ public class ShootingJoystick : MonoBehaviour, IrotationPlayer
     private void Start()
     {
         playermovement = FindObjectOfType<PlayerMovement>();
-        Instance = this;
     }
 
 
-
-    private void Update()
-    {    
+    private void LateUpdate()
+    {
         RotatingPlayer(OnRotateInShooting);
+        BoolRotate();
     }
 
-  
 
     public void RotatingPlayer(bool OnRotate)
-    {
-        BoolRotate();
-        
+    {              
         if (OnRotate)
         {
             playermovement._rotateSpeed = 50f;
-            playermovement.RotatePlayer(new Vector3(joystick.Horizontal, 0, joystick.Vertical) * Time.deltaTime);            
+            playermovement.RotatePlayer(new Vector3(joystickShooting.Horizontal, 0, joystickShooting.Vertical));            
         }             
     }
     
 
-
     private void BoolRotate()
     {
-        if(Mathf.Abs(joystick.Horizontal) > 0f || Mathf.Abs(joystick.Horizontal ) > 0f)            
-        {
+        if(Mathf.Abs(joystickShooting.Horizontal * Time.deltaTime) > 0f || Mathf.Abs(joystickShooting.Vertical * Time.deltaTime) > 0f)        
             OnRotateInShooting = true;
-        }
         else
-        {
             OnRotateInShooting = false;
-        }
-        //Debug.Log(OnRotateInShooting);
     }
 }

@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 2430377845347252045}
   - component: {fileID: 5955962204938443363}
   - component: {fileID: 3689743156461591662}
+  - component: {fileID: 8775599171366200305}
   m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -231,8 +232,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3199409928624324999b9336dd1ed8f3, type: 2}
-  m_sharedMaterial: {fileID: 21032597133445202, guid: 3199409928624324999b9336dd1ed8f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -298,6 +299,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8775599171366200305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871488485066560212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5213710c2d2472343b548e4c572d61af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text:
+  - 'Boss '
+  - "\u0411\u043E\u0441\u0441"
 --- !u!1 &1976140441793147318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,6 +2290,7 @@ GameObject:
   - component: {fileID: 2093489600489499666}
   - component: {fileID: 6955253922161712522}
   - component: {fileID: 605412072821338160}
+  - component: {fileID: 7970482806784097195}
   m_Layer: 5
   m_Name: Text - MessageBoss
   m_TagString: Untagged
@@ -2331,8 +2348,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The boss appeared on the map
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3199409928624324999b9336dd1ed8f3, type: 2}
-  m_sharedMaterial: {fileID: 21032597133445202, guid: 3199409928624324999b9336dd1ed8f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2398,6 +2415,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7970482806784097195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774812544473124818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5213710c2d2472343b548e4c572d61af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text:
+  - The boss appeared on the map
+  - "\u041D\u0430 \u043A\u0430\u0440\u0442\u0435 \u043F\u043E\u044F\u0432\u0438\u043B\u0441\u044F
+    \u0431\u043E\u0441\u0441"
 --- !u!1 &8949611103915586765
 GameObject:
   m_ObjectHideFlags: 0

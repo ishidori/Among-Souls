@@ -8,6 +8,7 @@ public class SpawnersEasyEnemy : MonoBehaviour
     [SerializeField] private List<Transform> SpawnPoints;
     [SerializeField] private float TimeSpawnEnemy;
     //[SerializeField] private int StopSpawnMin;
+    [SerializeField] private FromGameSoulsCounter counter;
     private TimeLive Timer;
     private bool endWave = false;
     private bool stop1wawe = false;
@@ -84,7 +85,7 @@ public class SpawnersEasyEnemy : MonoBehaviour
         {           
             var spawn = Random.Range(0,SpawnPoints.Count);             
             Instantiate(PrefabEnemy,SpawnPoints[spawn]);
-           
+            counter.FindEnemyForCounter();
             yield return new WaitForSeconds(TimeSpawnEnemy);
         }
        

@@ -11,15 +11,12 @@ public class FromGameSoulsCounter : MonoBehaviour
     [HideInInspector] public bool CanCounterIncrease = true;
     [HideInInspector] public int value;
 
-    private void Update()
-    {
-        FindEnemyForCounter();
-    }
 
     private void Start()
     {
         language = PlayerPrefs.GetInt("Language");
     }
+
 
     public void FindEnemyForCounter()
     {
@@ -29,13 +26,11 @@ public class FromGameSoulsCounter : MonoBehaviour
     }
 
 
-
     private void OnDestroy()
     {
         foreach (var EventDied in EventDied)
             EventDied.Died -= OnDied;
     }
-
 
 
     private void OnDied()

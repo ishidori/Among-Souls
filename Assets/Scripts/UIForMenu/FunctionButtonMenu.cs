@@ -42,7 +42,7 @@ public class FunctionButtonMenu : MonoBehaviour
     {
         FunctionButtonsForMenu(MenuShopGuns);
         ButtonClickSound.Play();
-        
+
         if (MenuSettings.enabled == true)
         {
             MenuSettings.enabled = false;
@@ -117,6 +117,7 @@ public class FunctionButtonMenu : MonoBehaviour
         foreach (Localization loc in Localization)
         loc.FunctionLocalization();
         shop.UpdateWeaponList();
+        ButtonClickSound.Play();
     }
 
 
@@ -126,6 +127,7 @@ public class FunctionButtonMenu : MonoBehaviour
         foreach(Localization loc in Localization)
         loc.FunctionLocalization();
         shop.UpdateWeaponList();
+        ButtonClickSound.Play();
     }
 
 }

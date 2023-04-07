@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class MovementJoystick : MonoBehaviour, IrotationPlayer
+public class MovementJoystick : MonoBehaviour,IrotationPlayer
 {
-    [SerializeField] public Joystick joystick;
+    [SerializeField] public Joystick joystickMovement;
     [SerializeField] private ShootingJoystick shootingJoystick;
     private PlayerMovement playermovement;
     [HideInInspector] public bool OnRotateInMovement = false;
@@ -15,13 +15,11 @@ public class MovementJoystick : MonoBehaviour, IrotationPlayer
     }
 
 
-
     private void LateUpdate()
     {
-        playermovement.MovePlayer(new Vector3(joystick.Horizontal, 0, joystick.Vertical));
+        playermovement.MovePlayer(new Vector3(joystickMovement.Horizontal, 0, joystickMovement.Vertical));
         RotatingPlayer(shootingJoystick.OnRotateInShooting);
     }
-
 
 
     public void RotatingPlayer(bool OnRotate)
@@ -29,7 +27,8 @@ public class MovementJoystick : MonoBehaviour, IrotationPlayer
         if (!OnRotate)
         {
             playermovement._rotateSpeed = 7f;
-            playermovement.RotatePlayer(new Vector3(joystick.Horizontal, 0, joystick.Vertical));
+            playermovement.RotatePlayer(new Vector3(joystickMovement.Horizontal, 0, joystickMovement.Vertical));
         }
+          
     }
 }

@@ -25,7 +25,7 @@ public class ControlForPC : MonoBehaviour
 
     private void Movement()
     {
-        if (Mathf.Abs(Movementjoystick.joystick.Horizontal) == 0f || Mathf.Abs(Movementjoystick.joystick.Horizontal) == 0f)
+        if (Mathf.Abs(Movementjoystick.joystickMovement.Horizontal) == 0f || Mathf.Abs(Movementjoystick.joystickMovement.Horizontal) == 0f)
         {
             X = Input.GetAxisRaw("Horizontal");
             Y = Input.GetAxisRaw("Vertical");

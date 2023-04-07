@@ -1,35 +1,20 @@
-using System.Security.Permissions;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header ("Player Stats")]
     [SerializeField] private float _speed = 5f;
-    public float _rotateSpeed = 10f;
-
-    
+    public float _rotateSpeed = 10f; 
     private FollowPlayerLight _light;
-    private Rigidbody _rb;
 
-
-
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-        _light = FindObjectOfType<FollowPlayerLight>();
-    }
-
-
+    private void Start() => _light = FindObjectOfType<FollowPlayerLight>();
 
     public void MovePlayer (Vector3 moveDirection)
     {
         var offset = moveDirection * _speed * Time.deltaTime;
         transform.position += offset;
         _light.FollowPlayer();
-
     }
-
 
 
     public void RotatePlayer(Vector3 moveDirection)
@@ -40,5 +25,4 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
     }
-    
 }

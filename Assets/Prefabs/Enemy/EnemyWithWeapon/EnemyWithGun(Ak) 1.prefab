@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 40
   Souls: 3
+  _currentHealth: 0
 --- !u!114 &281206434515362493
 MonoBehaviour:
   m_ObjectHideFlags: 0

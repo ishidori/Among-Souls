@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float Damage;
     [SerializeField] private bool CanDamageWithTheHelpOfHands;
     [SerializeField] private bool FaceTargetInPlayer;
+    
     private void Start()
     {
         target = TrackPlayer.instance.player.transform;
@@ -18,18 +19,19 @@ public class EnemyController : MonoBehaviour
     }
 
 
-
     private void LateUpdate()
     {
-        stalkingPlayer();
-        agent.SetDestination(target.position);
+        if(healthPlayer.PlayerDied == false)
+        {
+            stalkingPlayer();
+            agent.SetDestination(target.position);
+        }     
     }
 
 
     private void stalkingPlayer()
     {
-        distance = Vector3.Distance(target.position, transform.position);    
-              
+        distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= agent.stoppingDistance)
         {
@@ -37,10 +39,9 @@ public class EnemyController : MonoBehaviour
             healthPlayer.Die();
 
             if (CanDamageWithTheHelpOfHands && Time.timeScale == 1f)
-            healthPlayer.Hp -= Damage;
-        }       
+                healthPlayer.Hp -= Damage;
+        }               
     }
-
 
 
     private void FaceTarget()
@@ -50,8 +51,6 @@ public class EnemyController : MonoBehaviour
             Vector3 direction = (target.position - transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-        }
-       
+        }      
     }
-
 }

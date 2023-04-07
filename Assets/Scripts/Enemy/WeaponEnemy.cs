@@ -18,6 +18,7 @@ public class WeaponEnemy : MonoBehaviour
     [SerializeField] private AudioSource Sound_Shoot;
     [SerializeField] private AudioClip Clip;
    
+    private HealthPlayer healthPlayer;
     private Transform target;
     private float _shootForse = 20f;
     private float distance;
@@ -28,8 +29,16 @@ public class WeaponEnemy : MonoBehaviour
     {
         target = TrackPlayer.instance.player.transform;
         StartCoroutine(routine: CoroutineShoot());
+        healthPlayer = FindObjectOfType<HealthPlayer>();
     }
 
+    private void Update()
+    {
+        if (healthPlayer.PlayerDied == false)
+            distance = Vector3.Distance(target.position, transform.position);    
+        else
+            Destroy(gameObject);
+    }
 
     private void Shoot()
     {
@@ -46,17 +55,15 @@ public class WeaponEnemy : MonoBehaviour
     {
         while (true)
         {
-            distance = Vector3.Distance(target.position, transform.position);
-            
-            if(distance <= agent.stoppingDistance)
+            yield return new WaitForSeconds(RateOfFire);
+            if (distance <= agent.stoppingDistance)
             {
                 Shoot();
                 Sound_Shoot.pitch = UnityEngine.Random.Range(0.95f, 1.15f);
                 Sound_Shoot.PlayOneShot(Clip, Volume);
                 //Sound_Shoot.Play();
                 RateOfFire = UnityEngine.Random.Range(RandomSpeedShotValue1, RandomSpeedShotValue2);
-            }
-            yield return new WaitForSeconds(RateOfFire);
+            }                       
         }
     }
 }

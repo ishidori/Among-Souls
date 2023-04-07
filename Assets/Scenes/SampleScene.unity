@@ -2923,7 +2923,7 @@ GameObject:
   - component: {fileID: 406586816}
   - component: {fileID: 406586817}
   m_Layer: 0
-  m_Name: SpawnersEnemyWithAk
+  m_Name: SpawnersEnemyHardWithAk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5827,7 +5827,7 @@ GameObject:
   - component: {fileID: 811241828}
   - component: {fileID: 811241829}
   m_Layer: 0
-  m_Name: SpawnersEnemySpeed
+  m_Name: SpawnersEnemyHardSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5850,7 +5850,7 @@ Transform:
   - {fileID: 672821184}
   - {fileID: 601716676}
   m_Father: {fileID: 1700676030}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &811241829
 MonoBehaviour:
@@ -6041,7 +6041,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HpBarPlayer: {fileID: 556441457}
   MenuDie: {fileID: 1196451153}
+  SpawnersEasy:
+  - {fileID: 1063813924}
+  - {fileID: 1566300231}
+  SpawnersBoss: {fileID: 1053965782}
+  SpawnersHard:
+  - {fileID: 406586817}
+  - {fileID: 811241829}
+  SpawnersHeal: {fileID: 1013131555}
+  MoveJoystick: {fileID: 3861230483213302121}
+  ShootingJoystick: {fileID: 416156162}
   Hp: 175
+  PlayerDied: 0
   currentHp: 0
 --- !u!114 &825321271
 MonoBehaviour:
@@ -7192,7 +7203,7 @@ Transform:
   - {fileID: 1185030695}
   - {fileID: 1027524010}
   m_Father: {fileID: 1700676030}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1013131555
 MonoBehaviour:
@@ -7531,7 +7542,7 @@ GameObject:
   - component: {fileID: 1063813923}
   - component: {fileID: 1063813924}
   m_Layer: 0
-  m_Name: SpawnersEnemyNormal
+  m_Name: SpawnersEnemyEasyNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11298,7 +11309,7 @@ GameObject:
   - component: {fileID: 1566300232}
   - component: {fileID: 1566300231}
   m_Layer: 0
-  m_Name: SpawnersEnemyWithPistol
+  m_Name: SpawnersEnemyEasyWithPistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12153,8 +12164,8 @@ Transform:
   - {fileID: 1063813923}
   - {fileID: 1566300232}
   - {fileID: 406586816}
-  - {fileID: 1013131553}
   - {fileID: 811241828}
+  - {fileID: 1013131553}
   - {fileID: 1053965781}
   m_Father: {fileID: 0}
   m_RootOrder: 9

@@ -33,6 +33,7 @@ public class Heal : MonoBehaviour
 
     private void OnDestroy()
     {
+        if(hpPlayer.PlayerDied == false)
         HealPlayer();
     }
 }
